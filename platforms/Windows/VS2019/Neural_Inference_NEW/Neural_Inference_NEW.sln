@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Neural_Inference_NEW", "Neural_Inference_NEW.vcxproj", "{347255A2-D10C-46AC-8620-D192F115AA8F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Python_DLL", "..\Python_DLL\Python_DLL.vcxproj", "{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Debug|x64.ActiveCfg = Debug|x64
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Debug|x64.Build.0 = Debug|x64
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Debug|x86.ActiveCfg = Debug|Win32
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Debug|x86.Build.0 = Debug|Win32
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Release|x64.ActiveCfg = Release|x64
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Release|x64.Build.0 = Release|x64
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Release|x86.ActiveCfg = Release|Win32
+		{347255A2-D10C-46AC-8620-D192F115AA8F}.Release|x86.Build.0 = Release|Win32
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Debug|x64.ActiveCfg = Debug|x64
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Debug|x64.Build.0 = Debug|x64
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Debug|x86.ActiveCfg = Debug|Win32
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Debug|x86.Build.0 = Debug|Win32
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Release|x64.ActiveCfg = Release|x64
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Release|x64.Build.0 = Release|x64
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Release|x86.ActiveCfg = Release|Win32
+		{BB037DEB-38A5-432E-9602-D6FDB0FC1F90}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC61152D-B622-4DBC-8750-8C5EA006C024}
+	EndGlobalSection
+EndGlobal
