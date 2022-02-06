@@ -7,7 +7,7 @@ using namespace std::chrono;
 using namespace nni;
 
 
-int main(int argc, char **argv) {
+//int main(int argc, char **argv) {
 	//Running tests:
 	//high_resolution_clock::time_point t1 = high_resolution_clock::now();
 	//test_samples_to_mfcc(); 
@@ -153,31 +153,31 @@ int main(int argc, char **argv) {
 	//wavs_to_pp_files();
 	//wavs_to_mfccs_files();
 	////---------------------------------------
-	int srate = 16000;
-	float twindow_size = 0.03;
-	float tstep_size = 0.01;
-	int nsamp = 7339;
+// 	int srate = 16000;
+// 	float twindow_size = 0.03;
+// 	float tstep_size = 0.01;
+// 	int nsamp = 7339;
 
-	int _window_size = (int)(0.5f + ((float)srate) * ((float)twindow_size));
-	int _step_size = (int)(0.5f + ((float)srate) * ((float)tstep_size));
-	printf("_window_size: %i\n_step_size: %i",_window_size, _step_size);
-	int _nsamp = nsamp;
-	int _srate = srate;
-	//int _mfcc_lofreq = mfcc_lofreq;
-	//int _mfcc_hifreq = mfcc_hifreq;
-	//int _mfcc_coeff = mfcc_coeff;
-	int _nframes = (int)((_nsamp - _window_size + _step_size) / _step_size);
+// 	int _window_size = (int)(0.5f + ((float)srate) * ((float)twindow_size));
+// 	int _step_size = (int)(0.5f + ((float)srate) * ((float)tstep_size));
+// 	printf("_window_size: %i\n_step_size: %i",_window_size, _step_size);
+// 	int _nsamp = nsamp;
+// 	int _srate = srate;
+// 	//int _mfcc_lofreq = mfcc_lofreq;
+// 	//int _mfcc_hifreq = mfcc_hifreq;
+// 	//int _mfcc_coeff = mfcc_coeff;
+// 	int _nframes = (int)((_nsamp - _window_size + _step_size) / _step_size);
 
-	printf("\nwindow: %i\ninstep: %i\nsrate: %i\nnsamp: %i\n\nnframes: %i\n", _window_size, _step_size, srate, nsamp, _nframes);
+// 	printf("\nwindow: %i\ninstep: %i\nsrate: %i\nnsamp: %i\n\nnframes: %i\n", _window_size, _step_size, srate, nsamp, _nframes);
 
-	test_signal_to_mfcc();
+// 	test_signal_to_mfcc();
 
 
-	//--------------------------------------
-	printf("\n\n Press a key to exit.\n");
-	getchar();
-	return 0;
-}
+// 	//--------------------------------------
+// 	printf("\n\n Press a key to exit.\n");
+// 	getchar();
+// 	return 0;
+// }
 
 
 //////////////////////////
@@ -252,149 +252,150 @@ int main(int argc, char **argv) {
 //}//extern "C"
 //
 //
-//////////////////////////
-////  UNITY API
-////  ANDROID ---> .so
 ////////////////////////
-//#ifdef __cplusplus
-//extern "C" {
-//
-//	float c_dtw_samples_samples_model(float* samples1, int nsamples1, int srate1, float* samples2, int nsamples2, int srate2, const char* model, bool resamp1 = true, bool resamp2 = true, bool norm1 = true, bool norm2 = true)
-//	{
-//		return dtw_samples_samples(samples1, nsamples1, srate1, samples2, nsamples2, srate2, model, resamp1, resamp2, norm1, norm2);
-//	}
-//
-//	float c_dtw_samples_wav_model(float* samples, int nsamp, int srate, const char* wav, const char* model, bool resamps = true, bool resampw = true, bool norms = true, bool normw = true)
-//	{
-//		return dtw_samples_wav(samples, nsamp, srate, wav, model, resamps, resampw, norms, normw);
-//	}
-//
-//	float c_dtw_wav_model(const char* wav1, const char* wav2, const char* model, bool resamp1 = true, bool resamp2 = true, bool norm1 = true, bool norm2 = true)
-//	{
-//		return dtw_wav(wav1, wav2, model, resamp1, resamp2, norm1, norm2);
-//	}
-//
-//	//float c_dtw_wav(const char* wav1, const char* wav2)
-//	//{
-//	//	return dtw_wav(wav1, wav2);
-//	//}
-//
-//	//float c_dtw_Andrew1_vs_Andrew2()
-//	//{
-//	//	return dtw_Andrew1_vs_Andrew2();
-//	//}
-//
-//	//int c_addition(int a, int b)
-//	//{
-//	//	return a + b;
-//	//}
-//
-//	//int c_can_load_wav_file(const char* wav)
-//	//{
-//	//	return can_load_wav_file(wav);
-//	//}
-//
-//	float c_samples_vs_pp_e(float* samples, int nsamp, int srate, const char* ppfile, const char* model, int& err, bool resamp = true, bool norm = true) {
-//		return c_dtw_samples_vs_pp(samples, nsamp, srate, ppfile, model, err, resamp, norm);
-//	}
-//
-//	float c_samples_vs_pp_pp_e(float* samples, int nsamp, int srate, const char* ppfile1, const char* ppfile2, const char* model, int& err, bool resamp = true, bool norm = true) {
-//		return c_dtw_samples_vs_pp_pp(samples, nsamp, srate, ppfile1, ppfile2, model, err, resamp, norm);
-//	}
-//
-//	float c_pp_vs_pp_e(const char* ppfile1, const char* ppfile2, int& err) {
-//		return c_dtw_pp_vs_pp(ppfile1, ppfile2, err);
-//	}
-//
-//	float c_debug_samples_vs_pp_e(float* samples, int nsamp, int srate, const char* ppfile, const char* model, const char* bindir, const char* word, int& err, bool resample = true, bool norm = true) {
-//		return c_debug_dtw_samples_vs_pp(samples, nsamp, srate, ppfile, model, bindir, word, err, resample, norm);
-//	}
-//
-//	float c_debug_samples_vs_pp_store_samples_to_bin_only(float* samples, int nsamp, int srate, const char* ppfile, const char* model, const char* bindir, const char* word, int& err, bool resample = true, bool norm = true) {
-//		return c_debug_dtw_samples_vs_pp_store_samples_to_bin_only(samples, nsamp, srate, ppfile, model, bindir, word, err, resample, norm);
-//	}
-//
-//
-//}//extern "C"
-//#endif //__cplusplus
-
-
-
-
-//-----------------------------------------------------------------------------------------------------------------------------------------------
-/////////////////////////////
-///Python API via CFFI
-//////////////////////////////
-
-//
-////////////////////////
-//  Windows  ---> .dll
-////////////////////////
-
-#define EXPORT_API __declspec(dllexport)
-
+//  UNITY API
+//  ANDROID ---> .so
+//  MacOS   ---> .dylib
+//////////////////////
+#ifdef __cplusplus
 extern "C" {
 
-	EXPORT_API float c_cffi_dtw_wav_model(const char* wav1, const char* wav2, const char* model)
+	float c_dtw_samples_samples_model(float* samples1, int nsamples1, int srate1, float* samples2, int nsamples2, int srate2, const char* model, bool resamp1 = true, bool resamp2 = true, bool norm1 = true, bool norm2 = true)
 	{
-		return dtw_wav(wav1, wav2, model, true, true, true, true);
+		return dtw_samples_samples(samples1, nsamples1, srate1, samples2, nsamples2, srate2, model, resamp1, resamp2, norm1, norm2);
 	}
 
-	EXPORT_API int nni_wav_file_metadata(const char* wav, int* nsamples, int* channels, int* samplerate, int* nbits, int* format) {
-
-		return Wav_metadata(wav, nsamples, channels, samplerate, nbits, format);
+	float c_dtw_samples_wav_model(float* samples, int nsamp, int srate, const char* wav, const char* model, bool resamps = true, bool resampw = true, bool norms = true, bool normw = true)
+	{
+		return dtw_samples_wav(samples, nsamp, srate, wav, model, resamps, resampw, norms, normw);
 	}
 
-	EXPORT_API int nni_read_file(const char* wav, float* data, int* nsamples, int* channels, int* samplerate) {
-
-		//return wav_to_samples(wav, data, nsamples[0], samplerate[0]);
-		return extract_audio_data(wav, nsamples, channels, samplerate, data);
+	float c_dtw_wav_model(const char* wav1, const char* wav2, const char* model, bool resamp1 = true, bool resamp2 = true, bool norm1 = true, bool norm2 = true)
+	{
+		return dtw_wav(wav1, wav2, model, resamp1, resamp2, norm1, norm2);
 	}
 
-	EXPORT_API int nni_signal_to_mfcc(float* signal, float* mfcc, int nsamp, int srate
-																			, float twindow_size, float tstep_size
-																			//, int mfcc_coeff
-																			//, int mfcc_lofreq, int mfcc_hifreq
-																			, int* nframes, int* nmfcc) {
+	//float c_dtw_wav(const char* wav1, const char* wav2)
+	//{
+	//	return dtw_wav(wav1, wav2);
+	//}
 
-		return signal_to_mfcc(signal, mfcc, nsamp, srate, twindow_size, tstep_size, nframes, nmfcc);
+	//float c_dtw_Andrew1_vs_Andrew2()
+	//{
+	//	return dtw_Andrew1_vs_Andrew2();
+	//}
+
+	//int c_addition(int a, int b)
+	//{
+	//	return a + b;
+	//}
+
+	//int c_can_load_wav_file(const char* wav)
+	//{
+	//	return can_load_wav_file(wav);
+	//}
+
+	float c_samples_vs_pp_e(float* samples, int nsamp, int srate, const char* ppfile, const char* model, int& err, bool resamp = true, bool norm = true) {
+		return c_dtw_samples_vs_pp(samples, nsamp, srate, ppfile, model, err, resamp, norm);
 	}
 
-	EXPORT_API void nni_process_signal(float* signal_in, float* signal_out, int nsamp_, int srate_, int* newsamp_, int* nsrate_, bool resample, bool norm) {
-		preprocess_signal(signal_in, signal_out, nsamp_, srate_, newsamp_, nsrate_, resample, norm);
+	float c_samples_vs_pp_pp_e(float* samples, int nsamp, int srate, const char* ppfile1, const char* ppfile2, const char* model, int& err, bool resamp = true, bool norm = true) {
+		return c_dtw_samples_vs_pp_pp(samples, nsamp, srate, ppfile1, ppfile2, model, err, resamp, norm);
 	}
 
-	EXPORT_API int nni_wav_to_mfcc(const char* wav_f, const char* mfcc_f) {
-
-		return wav_to_mfcc(wav_f, mfcc_f);
+	float c_pp_vs_pp_e(const char* ppfile1, const char* ppfile2, int& err) {
+		return c_dtw_pp_vs_pp(ppfile1, ppfile2, err);
 	}
 
-	EXPORT_API int nni_mfcc_to_pp(float* pp_array, float* mfcc, int timesteps, const char* model) {
-
-		return mfcc_to_pp_array(pp_array, mfcc, timesteps, model);
+	float c_debug_samples_vs_pp_e(float* samples, int nsamp, int srate, const char* ppfile, const char* model, const char* bindir, const char* word, int& err, bool resample = true, bool norm = true) {
+		return c_debug_dtw_samples_vs_pp(samples, nsamp, srate, ppfile, model, bindir, word, err, resample, norm);
 	}
 
-	EXPORT_API int nni_samples_to_pp(float* pp_array, float* samples, int nsamp, int srate, const char* model){//, bool resample=true, bool norm=true) {
-
-		return samples_to_pp_array(pp_array, samples, nsamp, srate, model, true, true);// , resample, norm);
+	float c_debug_samples_vs_pp_store_samples_to_bin_only(float* samples, int nsamp, int srate, const char* ppfile, const char* model, const char* bindir, const char* word, int& err, bool resample = true, bool norm = true) {
+		return c_debug_dtw_samples_vs_pp_store_samples_to_bin_only(samples, nsamp, srate, ppfile, model, bindir, word, err, resample, norm);
 	}
 
-	EXPORT_API int nni_get_timesteps(int nsamp, int srate) {
-
-		return get_timesteps(nsamp, srate);
-	}
-
-	EXPORT_API int nni_wav_to_pp(float* pp_array, char* wav, const char* model) {
-
-		return wav_to_pp_array(pp_array, wav, model, true, true); //, bool resample = true, bool norm = true)
-	}
-
-	EXPORT_API float nni_dtw(float* pp1, int T1, float* pp2, int T2) {
-
-		return dtw_pp(pp1, T1, pp2, T2);
-	}
 
 }//extern "C"
+#endif //__cplusplus
+
+
+
+
+// //-----------------------------------------------------------------------------------------------------------------------------------------------
+// /////////////////////////////
+// ///Python API via CFFI
+// //////////////////////////////
+
+// //
+// ////////////////////////
+// //  Windows  ---> .dll
+// ////////////////////////
+
+// #define EXPORT_API __declspec(dllexport)
+
+// extern "C" {
+
+// 	EXPORT_API float c_cffi_dtw_wav_model(const char* wav1, const char* wav2, const char* model)
+// 	{
+// 		return dtw_wav(wav1, wav2, model, true, true, true, true);
+// 	}
+
+// 	EXPORT_API int nni_wav_file_metadata(const char* wav, int* nsamples, int* channels, int* samplerate, int* nbits, int* format) {
+
+// 		return Wav_metadata(wav, nsamples, channels, samplerate, nbits, format);
+// 	}
+
+// 	EXPORT_API int nni_read_file(const char* wav, float* data, int* nsamples, int* channels, int* samplerate) {
+
+// 		//return wav_to_samples(wav, data, nsamples[0], samplerate[0]);
+// 		return extract_audio_data(wav, nsamples, channels, samplerate, data);
+// 	}
+
+// 	EXPORT_API int nni_signal_to_mfcc(float* signal, float* mfcc, int nsamp, int srate
+// 																			, float twindow_size, float tstep_size
+// 																			//, int mfcc_coeff
+// 																			//, int mfcc_lofreq, int mfcc_hifreq
+// 																			, int* nframes, int* nmfcc) {
+
+// 		return signal_to_mfcc(signal, mfcc, nsamp, srate, twindow_size, tstep_size, nframes, nmfcc);
+// 	}
+
+// 	EXPORT_API void nni_process_signal(float* signal_in, float* signal_out, int nsamp_, int srate_, int* newsamp_, int* nsrate_, bool resample, bool norm) {
+// 		preprocess_signal(signal_in, signal_out, nsamp_, srate_, newsamp_, nsrate_, resample, norm);
+// 	}
+
+// 	EXPORT_API int nni_wav_to_mfcc(const char* wav_f, const char* mfcc_f) {
+
+// 		return wav_to_mfcc(wav_f, mfcc_f);
+// 	}
+
+// 	EXPORT_API int nni_mfcc_to_pp(float* pp_array, float* mfcc, int timesteps, const char* model) {
+
+// 		return mfcc_to_pp_array(pp_array, mfcc, timesteps, model);
+// 	}
+
+// 	EXPORT_API int nni_samples_to_pp(float* pp_array, float* samples, int nsamp, int srate, const char* model){//, bool resample=true, bool norm=true) {
+
+// 		return samples_to_pp_array(pp_array, samples, nsamp, srate, model, true, true);// , resample, norm);
+// 	}
+
+// 	EXPORT_API int nni_get_timesteps(int nsamp, int srate) {
+
+// 		return get_timesteps(nsamp, srate);
+// 	}
+
+// 	EXPORT_API int nni_wav_to_pp(float* pp_array, char* wav, const char* model) {
+
+// 		return wav_to_pp_array(pp_array, wav, model, true, true); //, bool resample = true, bool norm = true)
+// 	}
+
+// 	EXPORT_API float nni_dtw(float* pp1, int T1, float* pp2, int T2) {
+
+// 		return dtw_pp(pp1, T1, pp2, T2);
+// 	}
+
+// }//extern "C"
 
 /////////////////////////////
 ////  ANDROID/Linux ---> .so
