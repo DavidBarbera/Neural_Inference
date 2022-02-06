@@ -10,7 +10,20 @@
 		31CEFB3E27AF486400C41602 /* source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31CEFB3D27AF486400C41602 /* source.cpp */; };
 		31CEFB4027AF49BD00C41602 /* MFCC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31CEFB3F27AF49BD00C41602 /* MFCC.cpp */; };
 		31CEFB4227AF49E700C41602 /* Resample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31CEFB4127AF49E700C41602 /* Resample.cpp */; };
+		31CEFB6827AF67E000C41602 /* Neural_Inference_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CEFB6727AF67E000C41602 /* Neural_Inference_iOS.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		31CEFB6327AF67DF00C41602 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		31CEFB3427AF47FC00C41602 /* Neural_Inference.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Neural_Inference.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +31,19 @@
 		31CEFB3D27AF486400C41602 /* source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = source.cpp; sourceTree = "<group>"; };
 		31CEFB3F27AF49BD00C41602 /* MFCC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MFCC.cpp; path = ../../../src/mfcc/MFCC.cpp; sourceTree = "<group>"; };
 		31CEFB4127AF49E700C41602 /* Resample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Resample.cpp; path = ../../../src/riffio/Resample.cpp; sourceTree = "<group>"; };
+		31CEFB6527AF67DF00C41602 /* libNeural_Inference_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNeural_Inference_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		31CEFB6727AF67E000C41602 /* Neural_Inference_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neural_Inference_iOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		31CEFB3127AF47FC00C41602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31CEFB6227AF67DF00C41602 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +60,7 @@
 				31CEFB3F27AF49BD00C41602 /* MFCC.cpp */,
 				31CEFB3D27AF486400C41602 /* source.cpp */,
 				31CEFB3627AF47FC00C41602 /* Neural_Inference */,
+				31CEFB6627AF67E000C41602 /* Neural_Inference_iOS */,
 				31CEFB3527AF47FC00C41602 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				31CEFB3427AF47FC00C41602 /* Neural_Inference.bundle */,
+				31CEFB6527AF67DF00C41602 /* libNeural_Inference_iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +80,14 @@
 				31CEFB3727AF47FC00C41602 /* Info.plist */,
 			);
 			path = Neural_Inference;
+			sourceTree = "<group>";
+		};
+		31CEFB6627AF67E000C41602 /* Neural_Inference_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				31CEFB6727AF67E000C41602 /* Neural_Inference_iOS.swift */,
+			);
+			path = Neural_Inference_iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,16 +110,37 @@
 			productReference = 31CEFB3427AF47FC00C41602 /* Neural_Inference.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
+		31CEFB6427AF67DF00C41602 /* Neural_Inference_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31CEFB6927AF67E000C41602 /* Build configuration list for PBXNativeTarget "Neural_Inference_iOS" */;
+			buildPhases = (
+				31CEFB6127AF67DF00C41602 /* Sources */,
+				31CEFB6227AF67DF00C41602 /* Frameworks */,
+				31CEFB6327AF67DF00C41602 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Neural_Inference_iOS;
+			productName = Neural_Inference_iOS;
+			productReference = 31CEFB6527AF67DF00C41602 /* libNeural_Inference_iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		31CEFB2C27AF47FC00C41602 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Neurotherapeutics;
 				TargetAttributes = {
 					31CEFB3327AF47FC00C41602 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					31CEFB6427AF67DF00C41602 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -105,6 +158,7 @@
 			projectRoot = "";
 			targets = (
 				31CEFB3327AF47FC00C41602 /* Neural_Inference */,
+				31CEFB6427AF67DF00C41602 /* Neural_Inference_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +181,14 @@
 				31CEFB4227AF49E700C41602 /* Resample.cpp in Sources */,
 				31CEFB4027AF49BD00C41602 /* MFCC.cpp in Sources */,
 				31CEFB3E27AF486400C41602 /* source.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31CEFB6127AF67DF00C41602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31CEFB6827AF67E000C41602 /* Neural_Inference_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +325,46 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Neural_Inference/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "MRC-UCL.Neural-Inference";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		31CEFB6A27AF67E000C41602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31CEFB6B27AF67E000C41602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -287,6 +385,15 @@
 			buildConfigurations = (
 				31CEFB3B27AF47FC00C41602 /* Debug */,
 				31CEFB3C27AF47FC00C41602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31CEFB6927AF67E000C41602 /* Build configuration list for PBXNativeTarget "Neural_Inference_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31CEFB6A27AF67E000C41602 /* Debug */,
+				31CEFB6B27AF67E000C41602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
