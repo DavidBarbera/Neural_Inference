@@ -2,7 +2,7 @@
 NI: A light-weight header-mostly Neural Network framework for on-device Inference.
 
 ## History  
-The original purpose of this framework was to provide inference for neural networks on mobile devices at at a time where there were close to none. It was implemented from scratch in C++ relying on Eigen's Library. It is completely cross-platform and currently works on Linux/Mac/Windows/iOS/Android.
+The original purpose of this framework was to provide inference for neural networks on mobile devices at at a time when there were close to none. It was implemented from scratch in C++ relying on Eigen's Library. It is completely cross-platform and currently works on Linux/Mac/Windows/iOS/Android.
 
 ## Philosophy
 The idea is to keep the simplicity of the original approach while keeping efficiency and low-latency at its core.
