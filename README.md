@@ -13,7 +13,7 @@ The idea is to keep the simplicity of the original approach while keeping effici
 
 ## Currently working on
 I want to revamp this old framework and make it truly open-source for today's rich ML ecosystem: 
-- Removing dependencies to UCL copywrighted routines
+- Removing dependencies to UCL copyrighted routines
 - Replicating digital signal processing utilities available to current frameworks/toolkits (PyTorch, TensorFlow and Kaldi)
 - Adding extensions to provide interface with specialised speech/linguistic software, such as Praat
 - Adding more architectures and ops to match the current appetite for transformers
